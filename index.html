@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- SEO & Open Graph Tags -->
+	<meta name="description" content="Web Genius Hub is Kenya's premier web design and development agency. We build professional, responsive, and SEO-optimized websites for Kenyan businesses, influencers, and content creators. Empowering Your Online Presence." />
+	<meta name="keywords" content="Kenya web design, Kenya website development, affordable web design Kenya, professional websites Kenya, digital transformation Kenya, responsive websites Kenya, SEO optimized websites Kenya, Nairobi web design, Mombasa website development, Web Genius Hub" />
+	<meta property="og:title" content="Web Genius Hub - Kenya's Premier Web Solutions">
+	<meta property="og:description" content="Empowering Your Online Presence with professional, responsive websites for Kenyan businesses, influencers, and content creators." />
+	<meta property="og:image" content="https://i.postimg.cc/nhJkjYcy/ailogo-2025-03-21-054153.jpg">
+	<meta property="og:url" content="https://yourwebsite.com">
+	<meta property="og:type" content="website">
+	<!-- Favicon using Logo -->
+	<link rel="icon" type="image/png" href="https://i.postimg.cc/y62nBzqY/ailogo-2025-03-21-054642.png">
+	<title>Web Genius Hub - Kenya's Premier Web Solutions</title>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+	<!-- Inline CSS -->
+<style>
+    /* Global Styles */
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      transition: background 0.5s, color 0.5s;
+    }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { margin: 0.5em 0; }
+    p { margin: 0.5em 0; }
+    
+    /* Navigation */
+    nav {
+      background: #007bff;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    nav a { margin: 0 10px; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #ffc107; }
+    
+    /* Header Section */
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 70px 20px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(270deg, #007bff, #ffc107, #343a40);
+      background-size: 600% 600%;
+      animation: gradientAnimation 15s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3em;
+    }
+    header p { font-size: 1.3em; margin-bottom: 20px; }
+    header .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #ff6600;
+      color: #fff;
+      border-radius: 5px;
+      transition: transform 0.3s, background 0.3s;
+      margin-top: 10px;
+    }
+    header .btn:hover { transform: scale(1.1); background: #e05500; }
+    
+    /* Logo Placement (Increased size 3x) */
+    #logo {
+      text-align: center;
+      margin: 20px 0;
+    }
+    #logo img {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+    }
+    
+    /* Our Process Section - 5 Steps with Bounce Animation and Custom Icons */
+    #process {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #process h2 { margin-bottom: 20px; font-size: 2.2em; }
+    .timeline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .process-step {
+      background: #fff;
+      padding: 10px;
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      width: 120px;
+      text-align: center;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .process-step .icon {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50%;
+      margin: auto;
+      font-size: 1.8em;
+      color: #fff;
+      font-weight: bold;
+    }
+    /* Custom icons set directly in HTML as emojis: 🗣️, 🎨, 💻, 🔍, 🚀 */
+    .process-step .label {
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .connector { font-size: 1.5em; color: #888; }
+    
+    /* About Us Section */
+    #about {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+    
+    /* Latest Insights (Blog) Section with FadeInUp Animation */
+    #blog {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #blog h2 { margin-bottom: 20px; }
+    .blog-posts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .post {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      text-align: left;
+      font-size: 0.95em;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+    .post:hover { transform: translateY(-5px); }
+    .post:nth-child(1) { border-left: 5px solid #007bff; }
+    .post:nth-child(2) { border-left: 5px solid #28a745; }
+    .post:nth-child(3) { border-left: 5px solid #ff6600; }
+    .post:nth-child(4) { border-left: 5px solid #ffc107; }
+    .post:nth-child(5) { border-left: 5px solid #6f42c1; }
+    .post:nth-child(6) { border-left: 5px solid #dc3545; }
+    .post:nth-child(7) { border-left: 5px solid #17a2b8; }
+    .post:nth-child(8) { border-left: 5px solid #8a2be2; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Social Media Websites Section */
+    #social {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #social p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+    
+    /* Achievements Section */
+    #achievements {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #achievements h2 { margin-bottom: 20px; }
+    .stat-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    .stat.projects { background: #28a745; }
+    .stat.clients { background: #007bff; }
+    .stat.experience { background: #ff6600; }
+    
+    /* Solutions (Pricing) Section with Toggle */
+    #packages {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #priceToggle {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #priceToggle button {
+      padding: 8px 12px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #priceToggle button:hover { background: #0056b3; }
+    #packages .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .package {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: left;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .package:hover { transform: translateY(-10px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .package h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8em;
+      margin-top: 0;
+    }
+    .price {
+      display: inline-block;
+      padding: 5px 10px;
+      font-weight: bold;
+      font-size: 1.3em;
+      border-radius: 5px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .basic .price { background: #28a745; }
+    .standard .price { background: #007bff; }
+    .premium .price { background: #ff6600; }
+    .elite .price { background: #ffc107; }
+    .social .price { background: #8a2be2; }
+    .animated-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+    .animated-list li {
+      position: relative;
+      padding-left: 30px;
+      margin: 8px 0;
+      opacity: 0;
+      animation: slideIn 0.5s forwards;
+    }
+    .animated-list li::before {
+      content: "➤";
+      position: absolute;
+      left: 0;
+      color: #ff6600;
+      animation: pulse 1s infinite;
+    }
+    .animated-list li:nth-child(1) { animation-delay: 0.2s; }
+    .animated-list li:nth-child(2) { animation-delay: 0.4s; }
+    .animated-list li:nth-child(3) { animation-delay: 0.6s; }
+    .animated-list li:nth-child(4) { animation-delay: 0.8s; }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .standard { border-top: 3px solid #007bff; }
+    .premium { border-top: 3px solid #ff6600; }
+    .elite { border-top: 3px solid #ffc107; }
+    .social { border-top: 3px solid #8a2be2; }
+    /* Stylish Get Started Button */
+    .getStartedBtn {
+      border: 2px solid transparent;
+      padding: 10px 20px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s, border-color 0.3s;
+    }
+    .basic .getStartedBtn { background: #28a745; }
+    .standard .getStartedBtn { background: #007bff; }
+    .premium .getStartedBtn { background: #ff6600; }
+    .elite .getStartedBtn { background: #ffc107; }
+    .social .getStartedBtn { background: #8a2be2; }
+    .getStartedBtn:hover { transform: scale(1.05); border-color: #fff; }
+    
+    /* Important Notice Section */
+    #notice {
+      background: #ffc107;
+      color: #333;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px auto;
+      max-width: 800px;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-align: center;
+    }
+    
+    /* Send Us a Message Section */
+    #sendMessage {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #sendMessage textarea {
+      width: 90%;
+      max-width: 600px;
+      height: 150px;
+      font-size: 1.1em;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+    }
+    #sendMessage .btn {
+      margin-top: 10px;
+      background: #39ff14; /* Neon Green */
+      color: #fff;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #39ff14;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    #sendMessage .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #39ff14;
+    }
+    
+    /* Portfolio Section */
+    #portfolio {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #portfolio .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .portfolio-item {
+      width: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .portfolio-item:hover { transform: scale(1.03); }
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .portfolio-item p {
+      padding: 10px;
+      background: #fff;
+      font-size: 0.95em;
+      margin: 0;
+    }
+    
+    /* Testimonials Section */
+    #testimonials {
+      padding: 40px 20px;
+      background: #e9e9e9;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+    .testimonial-item {
+      padding: 10px;
+      border-left: 4px solid #ff6600;
+      margin-bottom: 10px;
+    }
+    .testimonial-item p { font-style: italic; }
+    .testimonial-item h4 { margin: 5px 0 0; font-weight: bold; }
+    /* Real Kenyan names */
+    .testimonial-item:nth-child(1) h4:after { content: " - James Mwangi"; }
+    .testimonial-item:nth-child(2) h4:after { content: " - Amina Hassan"; }
+    .testimonial-item:nth-child(3) h4:after { content: " - Peter Otieno"; }
+    
+    /* FAQ Section */
+    #faqs {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+    .faq-item {
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #faqs .faq-item:nth-child(1) { background: #e9e9e9; }
+    #faqs .faq-item:nth-child(2) { background: #d0e8f2; }
+    #faqs .faq-item:nth-child(3) { background: #f2e2d0; }
+    #faqs .faq-item:nth-child(4) { background: #e0d0f2; }
+    #faqs .faq-item:nth-child(5) { background: #d0f2d8; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s, padding 0.4s;
+      padding: 0 15px;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 10px 15px;
+    }
+    
+    /* Contact Section */
+    #contact {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #contact .contact-btn {
+      padding: 12px 24px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    #contact .contact-btn:hover { background: #005bb5; }
+    
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #333;
+      color: #fff;
+      font-size: 0.9em;
+    }
+    footer a { color: #ff6600; }
+    
+    /* Floating Buttons */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      z-index: 1000;
+      transition: transform 0.5s, opacity 0.5s;
+    }
+    #whatsapp-btn {
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #whatsapp-btn img { width: 80%; }
+    #whatsapp-btn.hide { transform: translateX(-100px); opacity: 0; }
+    #top-btn {
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ff4757;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8em;
+      color: #fff;
+    }
+    #top-btn.hide { transform: translateX(100px); opacity: 0; }
+    
+    /* Inline Keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+</style>
+  </head>
+  <body onload="resetFloatingTimers()">
+
+	<!-- Navigation Bar -->
+	<nav>
+	  <a href="#process">Our Process</a>
+	  <a href="#about">About Us</a>
+	  <a href="#blog">Latest Insights</a>
+	  <a href="#social">Social Media Websites</a>
+	  <a href="#achievements">Achievements</a>
+	  <a href="#packages">Solutions</a>
+	  <a href="#portfolio">Portfolio</a>
+	  <a href="#faqs">FAQs</a>
+	  <a href="#contact">Contact</a>
+	</nav>
+
+	<!-- Header Section -->
+	<header>
+	  <h1>Web Genius Hub</h1>
+	  <p>Your ultimate partner for professional, high-performance websites in Kenya.</p>
+	  <a href="#packages" class="btn">Explore Our Solutions</a>
+	</header>
+
+	<!-- Logo Below Animated Dashboard -->
+	<div id="logo">
+	  <img src="https://i.postimg.cc/y62nBzqY/ailogo-2025-03-21-054642.png" alt="Web Genius Hub Logo">
+	</div>
+
+	<!-- Our Process Section -->
+	<section id="process">
+	  <h2>Our Process</h2>
+	  <div class="timeline">
+		<div class="process-step">
+		  <div class="icon">🗣️</div>
+		  <div class="label">Consultation</div>
+		</div>
+		<div class="connector">→</div>
+		<div class="process-step">
+		  <div class="icon">🎨</div>
+		  <div class="label">Design</div>
+		</div>
+		<div class="connector">→</div>
+		<div class="process-step">
+		  <div class="icon">💻</div>
+		  <div class="label">Development</div>
+		</div>
+		<div class="connector">→</div>
+		<div class="process-step">
+		  <div class="icon">🔍</div>
+		  <div class="label">Testing</div>
+		</div>
+		<div class="connector">→</div>
+		<div class="process-step">
+		  <div class="icon">🚀</div>
+		  <div class="label">Launch</div>
+		</div>
+	  </div>
+	</section>
+
+	<!-- About Us Section -->
+	<section id="about">
+	  <h2>About Us</h2>
+	  <p>At Web Genius Hub, we blend creativity with cutting-edge technology to build websites that drive results. Serving Kenyan businesses and influencers, our mission is to empower you with a professional online presence that elevates your brand in today’s digital age.</p>
+	</section>
+
+	<!-- Latest Insights (Blog) Section -->
+	<section id="blog">
+	  <h2>Latest Insights</h2>
+	  <div class="blog-posts">
+		<div class="post">
+		  <h3>Trend 1: Minimalism in Design</h3>
+		  <p>Discover how minimalistic design boosts engagement and conversions.</p>
+		</div>
+		<div class="post">
+		  <h3>Trend 2: Dark Mode Everywhere</h3>
+		  <p>Learn why dark mode is becoming a design standard for modern websites.</p>
+		</div>
+		<div class="post">
+		  <h3>Trend 3: Speed Optimization</h3>
+		  <p>Explore techniques to achieve lightning-fast website performance.</p>
+		</div>
+		<div class="post">
+		  <h3>Trend 4: Responsive Design</h3>
+		  <p>Ensure your website looks great on every device.</p>
+		</div>
+		<div class="post">
+		  <h3>Trend 5: Interactive Animations</h3>
+		  <p>Engage visitors with dynamic, interactive elements.</p>
+		</div>
+		<div class="post">
+		  <h3>Trend 6: SEO Best Practices</h3>
+		  <p>Boost your search ranking with essential SEO strategies for Kenya.</p>
+		</div>
+		<div class="post">
+		  <h3>Trend 7: Personalization</h3>
+		  <p>Create unique experiences tailored to your audience.</p>
+		</div>
+		<div class="post">
+		  <h3>Trend 8: Social Media Integration</h3>
+		  <p>Learn how to seamlessly connect your website with your social channels.</p>
+		</div>
+	  </div>
+	</section>
+
+	<!-- Social Media Websites Section -->
+	<section id="social">
+	  <h2>Why Social Media Need a Website</h2>
+	  <p>Content creators on platforms like YouTube and TikTok can enhance their online presence with a dedicated website. Consolidate your social profiles, build credibility, and unlock new revenue streams with a professional site designed for Kenyan influencers.</p>
+	</section>
+
+	<!-- Achievements Section -->
+	<section id="achievements">
+	  <h2>Our Achievements</h2>
+	  <div class="stat-container">
+		<div class="stat projects">16<br>Projects</div>
+		<div class="stat clients">10+<br>Clients</div>
+		<div class="stat experience">1+<br>Year</div>
+	  </div>
+	</section>
+
+	<!-- Solutions (Pricing) Section -->
+	<section id="packages">
+	  <h2>Our Solutions</h2>
+	  <!-- Price Toggle: Default is Ksh -->
+	  <div id="priceToggle">
+		<button id="toggleButton" onclick="toggleCurrency()">Display in $</button>
+	  </div>
+	  <div class="pricing-container">
+		<!-- Basic Solution -->
+		<div class="package basic">
+		  <h3>Basic</h3>
+		  <p class="price" data-ks="Ksh 6,999" data-us="$54">Ksh 6,999</p>
+		  <ul class="animated-list">
+			<li>1-Page Website</li>
+			<li>Responsive Layout</li>
+			<li>Basic Animations</li>
+			<li>Contact Form</li>
+		  </ul>
+		  <a href="javascript:void(0);" class="btn getStartedBtn" onclick="openClientForm('Basic', this.parentElement.querySelector('.price').getAttribute('data-ks'))">
+			Get Started
+		  </a>
+		</div>
+		<!-- Standard Solution -->
+		<div class="package standard">
+		  <h3>Standard</h3>
+		  <p class="price" data-ks="Ksh 11,999" data-us="$93">Ksh 11,999</p>
+		  <ul class="animated-list">
+			<li>3-5 Pages</li>
+			<li>Modern UI/UX</li>
+			<li>Advanced Animations</li>
+			<li>Google Map Integration</li>
+		  </ul>
+		  <a href="javascript:void(0);" class="btn getStartedBtn animated" onclick="openClientForm('Standard', this.parentElement.querySelector('.price').getAttribute('data-ks'))">
+			Get Started
+		  </a>
+		</div>
+		<!-- Premium Solution -->
+		<div class="package premium">
+		  <h3>Premium</h3>
+		  <p class="price" data-ks="Ksh 19,999" data-us="$155">Ksh 19,999</p>
+		  <ul class="animated-list">
+			<li>5-10 Pages</li>
+			<li>Custom Design</li>
+			<li>Full SEO Optimization</li>
+			<li>WhatsApp Chat Integration</li>
+		  </ul>
+		  <a href="javascript:void(0);" class="btn getStartedBtn animated" onclick="openClientForm('Premium', this.parentElement.querySelector('.price').getAttribute('data-ks'))">
+			Get Started
+		  </a>
+		</div>
+		<!-- Elite Solution -->
+		<div class="package elite">
+		  <h3>Elite</h3>
+		  <p class="price" data-ks="Ksh 29,999" data-us="$232">Ksh 29,999</p>
+		  <ul class="animated-list">
+			<li>10+ Pages</li>
+			<li>eCommerce/Booking System</li>
+			<li>Premium Animations</li>
+			<li>CRM Integration</li>
+		  </ul>
+		  <a href="javascript:void(0);" class="btn getStartedBtn animated" onclick="openClientForm('Elite', this.parentElement.querySelector('.price').getAttribute('data-ks'))">
+			Get Started
+		  </a>
+		</div>
+		<!-- YouTuber/Social Media Solution -->
+		<div class="package social">
+		  <h3>YouTuber</h3>
+		  <p class="price" data-ks="Ksh 4,999" data-us="$39">Ksh 4,999</p>
+		  <ul class="animated-list">
+			<li>1-Page Website</li>
+			<li>Social Media Integration</li>
+			<li>Video Embed Section</li>
+			<li>Bio & Contact Info</li>
+		  </ul>
+		  <a href="javascript:void(0);" class="btn getStartedBtn animated" onclick="openClientForm('Social Media', this.parentElement.querySelector('.price').getAttribute('data-ks'))">
+			Get Started
+		  </a>
+		</div>
+	  </div>
+	</section>
+
+	<!-- Important Notice Section -->
+	<section id="notice">
+	  <p>Important Notice: A compulsory 50% upfront fee before project begins</p>
+	</section>
+
+	<!-- Send Us a Message Section -->
+	<section id="sendMessage">
+	  <h2>Send Us a Message</h2>
+	  <textarea id="messageBox" placeholder="Your message will appear here..."></textarea><br>
+	  <a href="javascript:void(0);" class="btn" onclick="sendWhatsApp()">Send via WhatsApp</a>
+	</section>
+
+	<!-- Portfolio Section -->
+	<section id="portfolio">
+	  <h2>Our Portfolio</h2>
+	  <div class="portfolio-grid">
+		<div class="portfolio-item">
+		  <img src="https://i.postimg.cc/446bNRgw/pexels-xexusdesigner-777001.jpg" alt="Dashboard Showcase">
+		  <p>Dashboard – Sleek design for dynamic applications.</p>
+		</div>
+		<div class="portfolio-item">
+		  <img src="https://i.postimg.cc/cHNgV6rW/pexels-pixabay-39284.jpg" alt="Creative Website Design">
+		  <p>Creative design for modern businesses.</p>
+		</div>
+		<div class="portfolio-item">
+		  <img src="https://i.postimg.cc/4NKfQsxQ/pexels-tranmautritam-326503.jpg" alt="Portfolio Highlight">
+		  <p>Innovative dashboard and data display.</p>
+		</div>
+	  </div>
+	</section>
+
+	<!-- Achievements Section -->
+	<section id="achievements">
+	  <h2>Our Achievements</h2>
+	  <div class="stat-container">
+		<div class="stat projects">16<br>Projects</div>
+		<div class="stat clients">10+<br>Clients</div>
+		<div class="stat experience">1+<br>Year</div>
+	  </div>
+	</section>
+
+	<!-- Testimonials Section -->
+	<section id="testimonials">
+	  <h2>Testimonials</h2>
+	  <div id="testimonialsList">
+		<div class="testimonial-item">
+		  <p>"Web Genius Hub transformed our online presence. Their designs are modern, effective, and tailored for the Kenyan market!"</p>
+		  <h4></h4>
+		</div>
+		<div class="testimonial-item">
+		  <p>"Exceptional service and innovative digital solutions. Our website now truly represents our brand in Kenya."</p>
+		  <h4></h4>
+		</div>
+		<div class="testimonial-item">
+		  <p>"Reliable, professional, and creative. Highly recommended for any business in Kenya looking to grow online."</p>
+		  <h4></h4>
+		</div>
+	  </div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section id="faqs">
+	  <h2>Frequently Asked Questions</h2>
+	  <div class="faq-item" onclick="toggleFaq(this)">
+		<h3>How long does it take to build my website?</h3>
+		<div class="faq-answer"><p>Depending on the solution you choose, it typically takes between 1 to 7 days.</p></div>
+	  </div>
+	  <div class="faq-item" onclick="toggleFaq(this)">
+		<h3>Will my website be mobile friendly?</h3>
+		<div class="faq-answer"><p>Absolutely! All our designs are fully responsive and optimized for every device.</p></div>
+	  </div>
+	  <div class="faq-item" onclick="toggleFaq(this)">
+		<h3>Do you provide SEO optimization?</h3>
+		<div class="faq-answer"><p>Yes, each solution includes basic SEO to boost your website's ranking in Kenya and beyond.</p></div>
+	  </div>
+	  <div class="faq-item" onclick="toggleFaq(this)">
+		<h3>Can I update my website later?</h3>
+		<div class="faq-answer"><p>We offer ongoing maintenance and support to help you update your website as needed.</p></div>
+	  </div>
+	  <div class="faq-item" onclick="toggleFaq(this)">
+		<h3>What if I need a custom feature?</h3>
+		<div class="faq-answer"><p>We're happy to integrate additional features to meet your specific business needs.</p></div>
+	  </div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact">
+	  <h2>Get In Touch</h2>
+	  <p>Interested in our solutions? Use the buttons below:</p>
+	  <button class="contact-btn" onclick="window.location.href='tel:+254745736283'">Call Us</button>
+	  <button class="contact-btn" onclick="window.location.href='mailto:brightmindssoftware@gmail.com'">Email Us</button>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+	  <p>&copy; 2025 Web Genius Hub. All rights reserved.</p>
+	  <p>Designed with passion for professional web solutions in Kenya.</p>
+	</footer>
+
+	<!-- Floating WhatsApp Button -->
+	<a id="whatsapp-btn" class="floating-btn" href="https://wa.me/254745736283" target="_blank">
+	  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us">
+	</a>
+
+	<!-- Floating Back-to-Top Button -->
+	<button id="top-btn" class="floating-btn" onclick="scrollToTop()">&#x2191;</button>
+
+	<!-- Client Form Modal -->
+	<div id="clientFormModal" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); align-items: center; justify-content: center; z-index: 1002;">
+	  <div style="background: #fff; width: 90%; max-width: 500px; border-radius: 10px; padding: 20px; position: relative; animation: fadeIn 0.5s;">
+		<h2 style="text-align:center;">Tell Us More</h2>
+		<form id="clientForm">
+		  <label for="clientName">Full Name*</label><br>
+		  <input type="text" id="clientName" name="clientName" style="width:100%; padding:8px; margin-bottom:10px;" required><br>
+		  <label for="websiteCategory">Website Category*</label><br>
+		  <select id="websiteCategory" name="websiteCategory" style="width:100%; padding:8px; margin-bottom:10px;" required>
+			<option value="">Select Category</option>
+			<option value="Business Website">Business Website</option>
+			<option value="Portfolio">Portfolio</option>
+			<option value="E-commerce Store">E-commerce Store</option>
+			<option value="Blog/News">Blog/News</option>
+			<option value="Personal Brand">Personal Brand</option>
+			<option value="Landing Page">Landing Page</option>
+			<option value="YouTube/TikTok Link Website">YouTube/TikTok Link Website</option>
+			<option value="Custom">Custom</option>
+		  </select><br>
+		  <label for="projectDesc">Project Description</label><br>
+		  <textarea id="projectDesc" name="projectDesc" style="width:100%; padding:8px; margin-bottom:10px;" placeholder="Describe your project (optional)"></textarea><br>
+		  <!-- Hidden field to store selected package -->
+		  <input type="hidden" id="selectedPackage" name="selectedPackage">
+		  <div style="text-align:center; margin-top:10px;">
+			<button type="submit" style="padding:10px 20px; background:#39ff14; border:none; border-radius:5px; color:#fff; font-weight:bold; cursor:pointer; box-shadow: 0 0 10px #39ff14; transition: transform 0.3s, box-shadow 0.3s;">Submit Details</button>
+			<button type="button" onclick="closeClientForm()" style="padding:10px 20px; background:#dc3545; border:none; border-radius:5px; color:#fff; font-weight:bold; cursor:pointer; margin-left:10px;">Cancel</button>
+		  </div>
+		</form>
+	  </div>
+	</div>
+
+	<!-- Inline JavaScript -->
+<script>
+    // Smooth Scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", e => {
+        e.preventDefault();
+        document.querySelector(anchor.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+      });
+    });
+    
+    // FAQ Toggle
+    function toggleFaq(element) {
+      element.classList.toggle('active');
+    }
+    
+    // Global variable to store package details
+    let packageDetails = "";
+    
+    // Open Client Form Modal when Get Started is clicked
+    function openClientForm(packageName = "", defaultPriceKsh = "") {
+      if(packageName !== "") {
+        packageDetails = `Package Selected: ${packageName}\nPrice: Ksh ${defaultPriceKsh}\n`;
+        document.getElementById("selectedPackage").value = packageName;
+      }
+      document.getElementById("clientFormModal").style.display = "flex";
+    }
+    
+    // Close Client Form Modal
+    function closeClientForm() {
+      document.getElementById("clientFormModal").style.display = "none";
+    }
+    
+    // Handle Client Form Submission
+    document.getElementById("clientForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const name = document.getElementById("clientName").value.trim();
+      const category = document.getElementById("websiteCategory").value;
+      const desc = document.getElementById("projectDesc").value.trim();
+      const pkg = document.getElementById("selectedPackage").value;
+      if(name === "" || category === "") {
+        alert("Please fill in your full name and select a website category.");
+        return;
+      }
+      let finalMessage = `Client Name: ${name}\n`;
+      finalMessage += `Website Category: ${category}\n`;
+      if(desc !== "") finalMessage += `Project Description: ${desc}\n`;
+      finalMessage += packageDetails;
+      finalMessage += "\nI agree to pay 50% upfront fee before project begins";
+      document.getElementById("messageBox").value = finalMessage;
+      closeClientForm();
+      document.getElementById("sendMessage").scrollIntoView({ behavior: "smooth" });
+    });
+    
+    // Send WhatsApp Message
+    function sendWhatsApp() {
+      const phone = "254745736283";
+      const message = document.getElementById("messageBox").value;
+      if (message.trim() !== "") {
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+      } else {
+        alert("Please fill in your message.");
+      }
+    }
+    
+    // Price Toggle: Default is Ksh; toggle to USD and back.
+    let currency = 'ksh';
+    function toggleCurrency() {
+      currency = (currency === 'ksh') ? 'usd' : 'ksh';
+      setCurrency(currency);
+      document.getElementById("toggleButton").textContent = (currency === 'ksh') ? "Display in $" : "Display in Ksh";
+    }
+    function setCurrency(curr) {
+      const priceElements = document.querySelectorAll('.price');
+      priceElements.forEach(el => {
+        if (curr === 'ksh') {
+          el.textContent = el.getAttribute('data-ks');
+        } else {
+          el.textContent = el.getAttribute('data-us');
+        }
+      });
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+      setCurrency('ksh');
+    });
+    
+    // Floating Buttons: Hide on Inactivity and Reappear on Scroll
+    const topBtn = document.getElementById("top-btn");
+    const whatsappBtn = document.getElementById("whatsapp-btn");
+    let topTimeout, whatsappTimeout;
+    function resetFloatingTimers() {
+      topBtn.classList.remove("hide");
+      whatsappBtn.classList.remove("hide");
+      clearTimeout(topTimeout);
+      clearTimeout(whatsappTimeout);
+      topTimeout = setTimeout(() => { topBtn.classList.add("hide"); }, 4000);
+      whatsappTimeout = setTimeout(() => { whatsappBtn.classList.add("hide"); }, 6000);
+    }
+    window.addEventListener("scroll", resetFloatingTimers);
+    resetFloatingTimers();
+    
+    // Back-to-Top Functionality
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+  </body>
+</html>
