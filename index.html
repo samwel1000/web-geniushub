@@ -77,7 +77,7 @@
     }
     header .btn:hover { transform: scale(1.05); background: #FFC107; }
     
-    /* Logo Container with White Background & Golden Smoke Inside the Border */
+    /* Logo Container with White Background & Golden Smoke Confined */
     #logoContainer {
       width: 400px;
       height: 400px;
@@ -233,7 +233,7 @@
     .post h3 { margin-bottom: 10px; font-family: 'Montserrat', sans-serif; }
     .post p { font-size: 0.95em; }
     
-    /* Pricing Section with Updated Discount (Displayed price is 50% of Original) */
+    /* Pricing Section */
     #pricing {
       padding: 50px 20px;
       text-align: center;
@@ -288,7 +288,7 @@
     }
     .pricing-card .btn:hover { background: #FFC107; }
     
-    /* Important Notice Section (Below Pricing) */
+    /* Important Notice Section */
     #notice {
       background: #FFD700;
       color: #111;
@@ -301,7 +301,7 @@
       font-size: 1.1em;
     }
     
-    /* Send Us a Message Section (Only One Instance) */
+    /* Send Us a Message Section (Single Instance) */
     #sendMessage {
       padding: 50px 20px;
       text-align: center;
@@ -333,7 +333,7 @@
       box-shadow: 0 0 20px #39ff14;
     }
     
-    /* Testimonials Section with 12 Slides, 11 Sec Each */
+    /* Testimonials Section */
     #testimonials {
       padding: 50px 20px;
       text-align: center;
@@ -567,7 +567,7 @@
     <a href="#pricing" class="btn">Explore Our Solutions</a>
   </header>
   
-  <!-- Logo Container with White Background & Golden Smoke Animation Inside -->
+  <!-- Logo Container with White Background & Confined Golden Smoke -->
   <div id="logoContainer">
     <div id="logo">
       <img src="https://i.postimg.cc/y62nBzqY/ailogo-2025-03-21-054642.png" alt="Web Genius Hub Logo">
@@ -642,7 +642,7 @@
     </div>
   </section>
   
-  <!-- Pricing Section with Updated Discount (Displayed price is 50% of Original) -->
+  <!-- Pricing Section -->
   <section id="pricing">
     <h2>Our Solutions & Pricing</h2>
     <div class="pricing-container">
@@ -721,19 +721,19 @@
     <p style="margin-top:20px; font-weight:700; color:#FF4500;">Limited Offer: 50% OFF!</p>
   </section>
   
-  <!-- Important Notice Section (Below Pricing) -->
+  <!-- Important Notice Section -->
   <section id="notice">
     <p>Important Notice: A compulsory 50% upfront fee is required before project begins (i.e., half of the "Now" price).</p>
   </section>
   
-  <!-- Send Us a Message Section (Only One Instance) -->
+  <!-- Send Us a Message Section (Single Instance) -->
   <section id="sendMessage">
     <h2>Send Us a Message</h2>
     <textarea id="messageBox" placeholder="Send WebGenius-Hub a text"></textarea><br>
     <a href="javascript:void(0);" class="btn" onclick="sendWhatsApp()">Send via WhatsApp</a>
   </section>
   
-  <!-- Testimonials Section with 12 Slides, 11 Sec Each -->
+  <!-- Testimonials Section -->
   <section id="testimonials">
     <h2>Testimonials</h2>
     <div id="testimonial-slider">
@@ -814,7 +814,7 @@
           <p>"Their innovative solutions and excellent customer service are unmatched."</p>
         </div>
       </div>
-      <!-- Extra Testimonial for Lihanda Samuel (Shortened to match others) -->
+      <!-- Extra Testimonial for Lihanda Samuel (Shortened) -->
       <div class="testimonial-slide">
         <div class="testimonial">
           <div class="avatar">M</div>
@@ -901,7 +901,7 @@
   <!-- Floating Back-to-Top Button -->
   <button id="top-btn" class="floating-btn" onclick="scrollToTop()" style="background:#ff4757; border:none; border-radius:50%; width:50px; height:50px; font-size:1.8em; color:#fff;">↑</button>
   
-  <!-- Client Form Modal (Only One Instance) -->
+  <!-- Client Form Modal (Single Instance) -->
   <div id="clientFormModal" style="display:none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1002;">
     <div style="background: #fff; width: 90%; max-width: 500px; border-radius: 10px; padding: 20px; animation: fadeIn 0.5s;">
       <h2 style="text-align:center; color:#0A1931;">Tell Us More</h2>
@@ -978,9 +978,11 @@
       }
       document.getElementById("clientFormModal").style.display = "flex";
     }
+    
     function closeClientForm() {
       document.getElementById("clientFormModal").style.display = "none";
     }
+    
     document.getElementById("clientForm").addEventListener("submit", function(e) {
       e.preventDefault();
       const name = document.getElementById("clientName").value.trim();
@@ -1020,6 +1022,7 @@
     }
     window.addEventListener("scroll", resetFloatingTimers);
     resetFloatingTimers();
+    
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
